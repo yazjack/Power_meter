@@ -10,8 +10,10 @@ Adafruit_INA219 ina219_B(0x41);
 Adafruit_INA219 ina219_C(0x44);
 Adafruit_INA219 ina219_D(0x45);
 
-void setup(void)
-{
+  float shuntvoltage_A = 0, shuntvoltage_B = 0, shuntvoltage_C = 0, shuntvoltage_D = 0, busvoltage_A = 0, busvoltage_B = 0, busvoltage_C = 0, busvoltage_D = 0, current_A = 0, current_B = 0, current_C = 0, current_D = 0, loadvoltage_A = 0, loadvoltage_B = 0, loadvoltage_C = 0, loadvoltage_D = 0, power_A = 0, power_B = 0;
+  float power_C = 0, power_D = 0, offset = 0, current_off_A = 0;
+
+void setup(void)  {
   uint32_t currentFrequency;
 
   Serial.begin(9600);
@@ -35,31 +37,7 @@ void setup(void)
   ina219_D.setCalibration_16V_400mA();
 }
 
-void loop(void)
-{
-  float shuntvoltage_A = 0;
-  float shuntvoltage_B = 0;
-  float shuntvoltage_C = 0;
-  float shuntvoltage_D = 0;
-  float busvoltage_A = 0;
-  float busvoltage_B = 0;
-  float busvoltage_C = 0;
-  float busvoltage_D = 0;
-  float current_A = 0;
-  float current_B = 0;
-  float current_C = 0;
-  float current_D = 0;
-  float loadvoltage_A = 0;
-  float loadvoltage_B = 0;
-  float loadvoltage_C = 0;
-  float loadvoltage_D = 0;
-  float power_A = 0;
-  float power_B = 0;
-  float power_C = 0;
-  float power_D = 0;
-  float offset = 0;
-  float current_off_A = 0;
-  
+void loop(void) {  
   shuntvoltage_A = ina219_A.getShuntVoltage_mV();
   shuntvoltage_B = ina219_B.getShuntVoltage_mV();
   shuntvoltage_C = ina219_C.getShuntVoltage_mV();
