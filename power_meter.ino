@@ -10,8 +10,7 @@ Adafruit_INA219 ina219_B(0x41);
 Adafruit_INA219 ina219_C(0x44);
 Adafruit_INA219 ina219_D(0x45);
 
-  float shuntvoltage_A = 0, shuntvoltage_B = 0, shuntvoltage_C = 0, shuntvoltage_D = 0, busvoltage_A = 0, busvoltage_B = 0, busvoltage_C = 0, busvoltage_D = 0, current_A = 0, current_B = 0, current_C = 0, current_D = 0, loadvoltage_A = 0, loadvoltage_B = 0, loadvoltage_C = 0, loadvoltage_D = 0, power_A = 0, power_B = 0;
-  float power_C = 0, power_D = 0, offset = 0, current_off_A = 0;
+float shuntvoltage_A = 0, shuntvoltage_B = 0, shuntvoltage_C = 0, shuntvoltage_D = 0, busvoltage_A = 0, busvoltage_B = 0, busvoltage_C = 0, busvoltage_D = 0, current_A = 0, current_B = 0, current_C = 0, current_D = 0, loadvoltage_A = 0, loadvoltage_B = 0, loadvoltage_C = 0, loadvoltage_D = 0, power_A = 0, power_B = 0, power_C = 0, power_D = 0, offset = 0, current_off_A = 0;
 
 void setup(void)  {
   uint32_t currentFrequency;
